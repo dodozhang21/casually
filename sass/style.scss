@@ -5,7 +5,7 @@ Author: Ying Zhang
 Author URI: http://regretless.com/
 Description: Casually builds off of Twenty Twelve, so you get all of the goodness of a WordPress core theme included.
 Version: 1.0.0
-Tags: light, pink, orange, green, purple, two-column, right-sidebar, flexible-width, threaded-comments, sticky-post, post-formats
+Tags: light, pink, orange, green, purple, right-sidebar, responsive-layout, threaded-comments, sticky-post, post-formats
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 template: twentytwelve
@@ -35,6 +35,11 @@ html body .site {
 	margin: 25px auto;
 	padding: 0;
 	max-width: 1000px;
+}
+
+/* hide custom header */
+img.header-image {
+	display: none;
 }
 
 body a {
