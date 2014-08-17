@@ -3,6 +3,7 @@ Thank you for choosing the Casually Theme.
 Version History:
 
 version 1.0.0 - Hello world!
+version 1.0.1 - Responsive improvements on the header 
 
 --------------------------------------------------------------------------------
 For support, 
