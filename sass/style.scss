@@ -3,7 +3,7 @@ Theme Name: Casually
 Theme URI: http://pure-essence.net/2013/04/18/child-theme-for-twenty-twelve-casually
 Author: Ying Zhang
 Author URI: http://regretless.com/
-Description: Casually builds off of Twenty Twelve, so you get all of the goodness of a WordPress core theme included.
+Description: Casually builds off of Twenty Twelve, so you get all of the goodness of a WordPress core theme included. It's a cheerful, carefree and feminine theme.
 Version: 1.0.0
 Tags: light, pink, orange, green, purple, right-sidebar, responsive-layout, threaded-comments, sticky-post, post-formats
 License: GNU General Public License v2 or later
@@ -13,6 +13,16 @@ template: twentytwelve
 
 @import "compass";
 @import url('../twentytwelve/style.css');
+
+@mixin dashicons($content: "\2605") {
+  content: $content;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  line-height: 1;
+  font-family: 'dashicons';
+  vertical-align: top;
+}
 
 /* =========================================================================
  *   Causally
@@ -55,8 +65,8 @@ body {
 		font-size: 1.45em;
 		line-height: normal;
 		position: absolute;
-		top: -30px;
-		right: -10px;
+		top: -23px;
+		right: -4px;
 	}
 	#gallery-1 img,
 	#gallery-2 img,
@@ -112,23 +122,63 @@ img.header-image {
 }
 
 .main-navigation {
-	.current-menu-item > a, 
-	.current-menu-ancestor > a, 
-	.current_page_item > a, 
-	.current_page_ancestor > a {
-		background: url(images/flower.png) center bottom no-repeat;
+	> div > ul > .current-menu-item > a, 
+	> div > ul > .current_page_item > a, 
+	> div > ul > .current-menu-ancestor > a, 
+	> div > ul > .current_page_ancestor > a {
+		background: url(images/flower.png) center center no-repeat;
 	}
 
+
 	li {
+
+		> ul.sub-menu {
+			overflow: visible;
+			clip: inherit;
+			left: -920px;
+			&:before {
+				position: absolute;
+				content: '\00BB';
+				top: -30px;
+				left: 910px;
+			}
+			li {
+				position: relative;
+				&:hover, &:focus {
+					ul.sub-menu {
+						left: 200px;
+						&:before {
+							top: 11px;
+							left: -20px;
+						}
+					}
+				}
+			}
+			ul.sub-menu {
+				&:before {
+					left: 1100px;
+					top: 11px;
+				}
+			}
+
+		}
+		&:hover, &:focus {
+		 > ul.sub-menu {
+				left: -20px;
+				&:before {
+					left: 10px;
+				}
+			}
+		}
 		ul {
 			li {
 				a {
 					background: rgba(229,229,163,.8);
 					border: 0;
 					&:hover {
-						background: rgba(229,229,163,.8);
+						background: #D0D375;
 						border: 0;
-						text-decoration: underline;
+						text-decoration: none;
 					}
 				}
 			}
@@ -361,52 +411,122 @@ body {
 		margin-bottom: 0;
 	}
 
+	#site-navigation {
+		margin: 1.5em 0 0 0;
+	}
+
 
 	.main-navigation {
-		.current-menu-item > a, 
-		.current-menu-ancestor > a, 
-		.current_page_item > a, 
-		.current_page_ancestor > a {
+		> div > ul > .current-menu-item > a, 
+		> div > ul > .current_page_item > a, 
+		> div > ul > .current-menu-ancestor > a, 
+		> div > ul > .current_page_ancestor > a {
 			background: none;
 			font-weight: bold;
 		}
 
+		a {
+			font-size: 120%;
+			text-decoration: none;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
 
 		.menu-toggle {
+			&:before {
+				@include dashicons('\f333');
+				font-size: 120%;
+				padding-right: .2em;
+			}
+			font-size: 110%;
 			background: #797408;
 			color: white;
 			display: block;
 			border: 0;
-			border-radius: 3px 3px 0 0;
+			border-radius: 3px;
+			text-align: left;
 			&:hover, &:active {
-				background: #797408;
+				background: lighten(#797408, 5%);
 				color: white;
 				display: block;
 				border: 0;
-				border-radius: 3px 3px 0 0;
 				box-shadow: none;
 			}
 			&.toggled-on {
 				box-shadow: none;
+				border-bottom: 1px solid darken(#D0D375, 20%);
+				border-radius: 3px 3px 0 0;
 			}
+
 		}
 
-		li {
-			ul {
-				&.nav-menu.toggled-on {
+		ul {
+			&.nav-menu.toggled-on {
+				background: #D0D375;
+				display: block;
+				a {
+					display: block;
+					padding: .6em;
 				}
 				li {
+					margin: 0;
+					padding: 0;
+					text-align: left;
+					border-bottom: 1px dotted darken(#D0D375, 15%);
+
 					a {
-						background: rgba(229,229,163,.8);
+						background: none;
 						border: 0;
 						&:hover {
 							background: rgba(229,229,163,.8);
 							border: 0;
-							text-decoration: underline;
+							text-decoration: none;
 						}
+					}
+
+				}
+			}
+			
+		}
+
+		li {
+			> ul.sub-menu {
+				padding-left: 1em;
+				border-top: 1px dotted darken(#D0D375, 15%);
+				&:before {
+					content: '';
+				}
+				li:last-child {
+					border-bottom: 0;
+				}
+				a {
+					&:before {
+						content: '-';
+						padding-right: .1em;
+					}
+				}
+				
+				ul.sub-menu {
+					border-top: 1px dotted darken(#D0D375, 15%);
+					a {
+						&:before {
+							content: '--';
+						}
+					}
+					ul.sub-menu a:before {
+							content: '---';
+					}
+					&:before {
+						content: '';
+					}
+					li:last-child {
+						border-bottom: 0;
 					}
 				}
 			}
+
 		}
 
 	}
