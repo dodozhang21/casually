@@ -28,3 +28,6 @@ https://developers.google.com/webfonts/faq
 
 
 --------------------------------------------------------------------------------
+
+Casually WordPress Theme, Copyright 2014 Ying Zhang
+Casually is distributed under the terms of the GNU GPL.
