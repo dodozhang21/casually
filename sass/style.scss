@@ -4,7 +4,7 @@ Theme URI: http://pure-essence.net/2013/04/18/child-theme-for-twenty-twelve-casu
 Author: Ying Zhang
 Author URI: http://regretless.com/
 Description: Casually builds off of Twenty Twelve, so you get all of the goodness of a WordPress core theme included. It's a cheerful, carefree and feminine theme.
-Version: 1.0.3
+Version: 1.0.4
 Tags: light, pink, orange, green, purple, right-sidebar, responsive-layout, threaded-comments, sticky-post, post-formats
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -132,7 +132,7 @@ img.header-image {
 
 	li {
 
-		> ul.sub-menu {
+		> ul.sub-menu, > ul.children {
 			overflow: visible;
 			clip: inherit;
 			left: -920px;
@@ -145,7 +145,7 @@ img.header-image {
 			li {
 				position: relative;
 				&:hover, &:focus {
-					ul.sub-menu {
+					ul.sub-menu, ul.children {
 						left: 200px;
 						&:before {
 							top: 11px;
@@ -154,7 +154,7 @@ img.header-image {
 					}
 				}
 			}
-			ul.sub-menu {
+			ul.sub-menu, ul.children {
 				&:before {
 					left: 1100px;
 					top: 11px;
@@ -163,7 +163,7 @@ img.header-image {
 
 		}
 		&:hover, &:focus {
-		 > ul.sub-menu {
+		 > ul.sub-menu, > ul.children {
 				left: -20px;
 				&:before {
 					left: 10px;
@@ -524,7 +524,7 @@ body {
 		}
 
 		li {
-			> ul.sub-menu {
+			> ul.sub-menu, > ul.children {
 				padding-left: 1em;
 				border-top: 1px dotted darken(#D0D375, 15%);
 				&:before {
@@ -540,14 +540,14 @@ body {
 					}
 				}
 				
-				ul.sub-menu {
+				ul.sub-menu, ul.children {
 					border-top: 1px dotted darken(#D0D375, 15%);
 					a {
 						&:before {
 							content: '--';
 						}
 					}
-					ul.sub-menu a:before {
+					ul.sub-menu a:before, ul.children a:before {
 							content: '---';
 					}
 					&:before {
