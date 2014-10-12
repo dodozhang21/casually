@@ -13,8 +13,8 @@ visit http://pure-essence.net/2013/04/18/child-theme-for-twenty-twelve-casually
 --------------------------------------------------------------------------------
  Licenses:
 --------------------------------------------------------------------------------
-Casually is a child theme of Twenty Twelve
-Twenty Twelve is licensed under the GPL.
+Casually WordPress Theme, Copyright 2014 Ying Zhang
+Casually is distributed under the terms of the GNU GPL.
 
 == Bundled Resources: Images ==
 
@@ -29,5 +29,3 @@ https://developers.google.com/webfonts/faq
 
 --------------------------------------------------------------------------------
 
-Casually WordPress Theme, Copyright 2014 Ying Zhang
-Casually is distributed under the terms of the GNU GPL.
