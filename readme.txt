@@ -5,6 +5,7 @@ Version History:
 version 1.0.0 - Hello world!
 version 1.0.1 - Responsive improvements on the header 
 version 1.0.6 - Updated copyright information 
+version 1.0.7 - Added remove support in functions.php 
 
 --------------------------------------------------------------------------------
 For support, 

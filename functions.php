@@ -17,13 +17,11 @@ if ( ! function_exists( 'casually_setup' ) ):
  * @since casually 1.0.0
  */
 function casually_setup() {
-	/*
-	add_theme_support('custom-header', array (
-	        // Header image default
-	       'default-image'			=> get_stylesheet_directory_uri() . '/images/default-logo.png'));*/
+	remove_theme_support('custom-header');
+	remove_theme_support('custom-background');
 }
 endif; // casually_setup
-add_action( 'after_setup_theme', 'casually_setup' );
+add_action( 'after_setup_theme', 'casually_setup', 15 );
 
 
 /**
